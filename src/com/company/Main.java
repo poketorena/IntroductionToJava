@@ -4,9 +4,10 @@ public class Main {
     /* コメントだよ */
     // コメントだよ
     public static void main(String[] args) {
-        int a = 3;
-        int b = 5;
-        int c = a * b;
-        System.out.println("縦幅" + a + "横幅" + b + "の長方形の面積は、" + c);
+        boolean booleanVariable = true;
+        char charVariable = '駆';
+        double pi = 3.14;
+        long longPi = 314159265853979L;
+        String message = "ミナトの攻撃！敵に15ポイントのダメージを与えた。";
     }
 }
