@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         boolean booleanVariable = true;
         char charVariable = '駆';
-        double pi = 3.14;
-        long longPi = 314159265853979L;
-        String message = "ミナトの攻撃！敵に15ポイントのダメージを与えた。";
+        double pi = 3.1_4;
+        long longPi = 3_14159__265853979L;
+        String message = "ミ_ナトの攻撃！敵に15ポイントのダメージを与えた。";
     }
 }
