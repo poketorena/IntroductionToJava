@@ -2,16 +2,19 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        String hoge = "qwerty";
-        String fuga = new String("qwerty");
-
-        System.out.println("hoge:" + hoge);
-        System.out.println("fuga:" + fuga);
-
-        if (hoge.equals(fuga)) {
-            System.out.println("同じだよ");
-        } else {
-            System.out.println("違うよ");
+        System.out.println("あなたの運勢を占います");
+        int fortune = 1;
+        switch (fortune) {
+            case 1:
+                System.out.println("大吉");
+            case 2:
+                System.out.println("中吉");
+                break;
+            case 3:
+                System.out.println("吉");
+                break;
+            default:
+                System.out.println("凶");
         }
     }
 }
