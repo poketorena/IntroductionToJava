@@ -8,7 +8,7 @@ public class Main {
         System.out.println("hoge:" + hoge);
         System.out.println("fuga:" + fuga);
 
-        if (hoge == fuga) {
+        if (hoge.equals(fuga)) {
             System.out.println("同じだよ");
         } else {
             System.out.println("違うよ");
