@@ -7,6 +7,7 @@ public class Main {
         switch (fortune) {
             case 1:
                 System.out.println("大吉");
+                break;
             case 2:
                 System.out.println("中吉");
                 break;
