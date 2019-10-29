@@ -2,11 +2,16 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        boolean doorClose = true;
-        while (doorClose) {
-            System.out.println("ノックする");
-            System.out.println("1分待つ");
+        String hoge = "qwerty";
+        String fuga = new String("qwerty");
+
+        System.out.println("hoge:" + hoge);
+        System.out.println("fuga:" + fuga);
+
+        if (hoge == fuga) {
+            System.out.println("同じだよ");
+        } else {
+            System.out.println("違うよ");
         }
-        System.out.println("トイレに入る");
     }
 }
