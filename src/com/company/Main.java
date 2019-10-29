@@ -2,20 +2,19 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("あなたの運勢を占います");
-        int fortune = 1;
-        switch (fortune) {
-            case 1:
-                System.out.println("大吉");
-                break;
-            case 2:
-                System.out.println("中吉");
-                break;
-            case 3:
-                System.out.println("吉");
-                break;
-            default:
-                System.out.println("凶");
+        int seibetsu = 1;
+        int age = 18;
+
+        System.out.println("こんにちは。");
+
+        if (seibetsu == 0) {
+            System.out.println("私は男です。");
+            System.out.print(age);
+            System.out.println("歳です。");
+        } else {
+            System.out.println("私は女です。");
         }
+
+        System.out.println("よろしくおねがいします。");
     }
 }
