@@ -3,8 +3,9 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        int[][] scores = {{10, 20, 30}, {11, 22, 33}};
-        System.out.println(scores.length);
-        System.out.println(scores[0].length);
+        int[] points = new int[4];
+        double[] weights = new double[5];
+        boolean[] answers = new boolean[3];
+        String[] names = new String[3];
     }
 }
