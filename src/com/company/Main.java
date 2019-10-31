@@ -3,20 +3,19 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-    public static void email(String title, String address, String text) {
-        System.out.println(address + "に、以下のメールを送信しました");
-        System.out.println("件名：" + title);
-        System.out.println("本文：" + text);
+    public static double calcTriangleArea(double bottom, double height) {
+        return bottom * height / 2;
     }
 
-    public static void email(String address, String text) {
-        System.out.println(address + "に、以下のメールを送信しました");
-        System.out.println("件名：無題");
-        System.out.println("本文：" + text);
+    public static double calcCircleArea(double radius) {
+        return radius * radius * 3.14;
     }
 
     public static void main(String[] args) {
-        email("自己紹介", "sample@hoge.com", "こんにちは");
-        email("sample@hoge.com", "こんにちは");
+        double triangleArea = calcTriangleArea(10.0, 5.0);
+        System.out.println(triangleArea);
+
+        double circleArea = calcCircleArea(5.0);
+        System.out.println(circleArea);
     }
 }
