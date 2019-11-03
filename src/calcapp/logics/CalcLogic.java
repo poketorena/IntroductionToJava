@@ -1,4 +1,4 @@
-package com.company;
+package calcapp.logics;
 
 public class CalcLogic {
     public static int tasu(int a, int b) {
