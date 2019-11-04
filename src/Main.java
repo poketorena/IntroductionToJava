@@ -1,10 +1,7 @@
-import comment.Zenhan;
+import rpg.Hero;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        Zenhan.doWatusa();
-        Zenhan.doTogame();
-        comment.Kouhan.callDeae();
-        comment.Kouhan.showMondokoro();
+    public static void main(String[] args) {
+        Hero hero = new Hero();
     }
 }
