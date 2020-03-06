@@ -18,9 +18,10 @@ public class Cleric {
     }
 
     public int pray(int sec) {
-        int mpRecoveryAmount = sec + new Random().nextInt(2);
-        int actualMpRecoveryAmount = mpRecoveryAmount % this.MAX_MP;
+        int mpRecoveryAmount = sec + new Random().nextInt(3);
+        int actualMpRecoveryAmount = Math.min(this.MAX_MP - this.mp, mpRecoveryAmount);
         this.mp += actualMpRecoveryAmount;
+        System.out.println("MPが" + actualMpRecoveryAmount + "回復した。");
         return actualMpRecoveryAmount;
     }
 }
