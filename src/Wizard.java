@@ -16,6 +16,9 @@ public class Wizard {
     }
 
     public void setHp(int hp) {
+        if (hp < 0) {
+            this.hp = 0;
+        }
         this.hp = hp;
     }
 
@@ -24,6 +27,9 @@ public class Wizard {
     }
 
     public void setMp(int mp) {
+        if (mp < 0) {
+            throw new IllegalArgumentException("mpを負の値にはできません。");
+        }
         this.mp = mp;
     }
 
@@ -32,6 +38,12 @@ public class Wizard {
     }
 
     public void setName(String name) {
+        if (name == null) {
+            throw new IllegalArgumentException("名前がnullである。処理を中断。");
+        }
+        if (name.length() < 3) {
+            throw new IllegalArgumentException("名前が短すぎる。処理を中断。");
+        }
         this.name = name;
     }
 
@@ -40,6 +52,9 @@ public class Wizard {
     }
 
     public void setWand(Wand wand) {
+        if (wand == null) {
+            throw new IllegalArgumentException("wandをnullにはできません。処理を中断。");
+        }
         this.wand = wand;
     }
 }

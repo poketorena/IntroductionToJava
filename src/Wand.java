@@ -15,6 +15,9 @@ public class Wand {
     }
 
     public void setPower(double power) {
+        if (power < 0.5 || 100 < power) {
+            throw new IllegalArgumentException("増幅率が不適切。処理を中断。");
+        }
         this.power = power;
     }
 }
