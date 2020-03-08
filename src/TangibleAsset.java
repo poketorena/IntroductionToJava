@@ -1,21 +1,10 @@
-public abstract class TangibleAsset implements Asset, Thing {
-    private String name;
-    private int price;
+public abstract class TangibleAsset extends Asset implements Thing {
     private String color;
     private double weight;
 
     TangibleAsset(String name, int price, String color) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
         this.color = color;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public int getPrice() {
-        return this.price;
     }
 
     public String getColor() {
