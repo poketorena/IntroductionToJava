@@ -1,4 +1,4 @@
-public abstract class TangibleAsset {
+public abstract class TangibleAsset implements Asset {
     private String name;
     private int price;
     private String color;
