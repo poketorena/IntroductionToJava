@@ -1,11 +1,9 @@
 public class Main {
-    public static void main(String[] args) {
-        Y[] ys = new Y[2];
-        ys[0] = new A();
-        ys[1] = new B();
-
-        for (var y : ys) {
-            y.b();
-        }
+    public static void main(String[] args) throws InterruptedException {
+        long start = System.currentTimeMillis();
+        // ここで何らかの時間がかかる処理
+        Thread.sleep(5000);
+        long end = System.currentTimeMillis();
+        System.out.println("処理にかかった時間は…" + (end - start) + "ミリ秒でした");
     }
 }
