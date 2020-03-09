@@ -1,14 +1,13 @@
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Main {
-    public static void main(String[] args) throws Exception {
-        // 本日の日時を表示する
-        Date now = new Date();
-        SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        String s = f.format(now);
-        System.out.println(s);
-        // 指定日時の文字列を解析し、Date型として得る
-        Date d = f.parse("2011/09/22 01:23:45");
+    public static void main(String[] args) {
+        int i1 = 15;
+        // 明示的に書く場合
+        Integer i2 = Integer.valueOf(i1);
+        // 暗黙の型変換を使う場合（AutoBoxing）
+        Integer i3 = i1;
+        // 明示的に書く場合
+        int i4 = i2.intValue();
+        // 暗黙の型変換を使う場合（AutoUnboxing）
+        int i5 = i2;
     }
 }
