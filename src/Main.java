@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        String s = null;
+        String s = "三";
+        int i = -1;
         try {
-            System.out.println(s.length());
-        } catch (NullPointerException e) {
-            System.out.println("NullPointerException例外をcatchしました");
-            System.out.println("ーースタックトレース（ここから）ーー");
+            i = Integer.parseInt(s);
+        } catch (NumberFormatException e) {
             e.printStackTrace();
-            System.out.println("ーースタックトレース（ここまで）ーー");
         }
+
+        System.out.println(i);
     }
 }
