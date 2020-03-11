@@ -1,16 +1,16 @@
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
+import javax.swing.*;
+import java.awt.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        URL u = new URL("http://www.impressjapan.jp/");
-        InputStream is = u.openStream();
-        int i = is.read();
-        while (i != -1) {
-            char c = (char) i;
-            System.out.print(c);
-            i = is.read();
-        }
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("はじめてのGUI");
+        JLabel label = new JLabel("Hello World");
+        JButton button = new JButton("押してね");
+        frame.getContentPane().setLayout(new FlowLayout());
+        frame.getContentPane().add(label);
+        frame.getContentPane().add(button);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 100);
+        frame.setVisible(true);
     }
 }
