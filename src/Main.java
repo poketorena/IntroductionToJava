@@ -1,13 +1,7 @@
-public class Main {
-    public static void main(String[] args) {
-        String s = "三";
-        int i = -1;
-        try {
-            i = Integer.parseInt(s);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
+import java.io.IOException;
 
-        System.out.println(i);
+public class Main {
+    public static void main(String[] args) throws IOException {
+        throw new IOException();
     }
 }
