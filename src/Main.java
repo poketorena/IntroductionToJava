@@ -1,21 +1,16 @@
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 public class Main {
-    public static void main(String[] args) {
-        String filename = "test.txt";
-        char c1 = 'z';
-        char c2 = 'z';
-        try (FileWriter fileWriter = new FileWriter(filename)) {
-            try {
-                fileWriter.write('そ');// 1文字書く（上書き）
-                fileWriter.write('れ');// 1文字書く（上書き）
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+    public static void main(String[] args) throws IOException {
+        URL u = new URL("http://www.impressjapan.jp/");
+        InputStream is = u.openStream();
+        int i = is.read();
+        while (i != -1) {
+            char c = (char) i;
+            System.out.print(c);
+            i = is.read();
         }
-        System.out.println("書き込み成功！");
     }
 }
