@@ -1,34 +1,31 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
         String filename = "test.txt";
-        FileReader fr = null;
+        FileWriter fileWriter = null;
         char c1 = 'z';
         char c2 = 'z';
         try {
-            fr = new FileReader(filename);
+            fileWriter = new FileWriter(filename);
             try {
-                c1 = (char) fr.read();// 1文字読む
-                c2 = (char) fr.read();// 1文字読む
+                fileWriter.write('そ');// 1文字書く（上書き）
+                fileWriter.write('れ');// 1文字書く（上書き）
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         } finally {
             try {
-                if (fr != null) {
-                    fr.close();
+                if (fileWriter != null) {
+                    fileWriter.close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
-        System.out.println("最初の1文字 : " + c1);
-        System.out.println("次の1文字 : " + c2);
+        System.out.println("書き込み成功！");
     }
 }
