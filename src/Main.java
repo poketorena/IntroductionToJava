@@ -6,6 +6,8 @@ public class Main {
         Month month = LocalDateTime.now().getMonth();
 
         //JavaのEnumはnullを代入することができる
+        // C++ではNULLもnullptrも代入できない
+        // C#ではnullは代入できない（?でnull許容型にすれば代入できる）
         Month nullDayo = null;
 
         switch (month) {
