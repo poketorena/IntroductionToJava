@@ -1,11 +1,18 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String... args) {
-        List<String> strList = new ArrayList<>();
-        strList.add("Java");
-        strList.add("Groovy");
-        GenericStack<String> gstack = GenericStackUtil.as(strList);
+        NumberStack<Integer> intStack = new NumberStack<>();// IntegerクラスはNumberクラス
+
+        NumberStack<Long> longStack = new NumberStack<>();// LongクラスはNumberクラスの子クラス
+
+        // StringはNumberクラスの小クラスではないためコンパイルエラー
+        // NumberStack<String> strStack = new NumberStack<String>();
+        intStack.push(100);
+        intStack.push(200);
+
+        Integer numElement = intStack.pop();
+
+        if (numElement != null) {
+            System.out.println(numElement);
+        }
     }
 }
