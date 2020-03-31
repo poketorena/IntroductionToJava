@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Point {
     private final int x;
     private final int y;
@@ -26,10 +28,6 @@ public class Point {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + x;
-        result = prime * result + y;
-        return result;
+        return Objects.hash(this.x, this.y);
     }
 }
