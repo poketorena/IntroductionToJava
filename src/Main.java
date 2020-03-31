@@ -1,15 +1,16 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
     public static void main(String... args) {
-        Object obj = new FooService("hello");
-
-        System.out.println(obj instanceof FooService);//true
-        System.out.println(obj instanceof AbstractBaseService);//親クラスなのでtrue
-        System.out.println(obj instanceof BaseService);//インタフェースを実装しているのでtrue
-        System.out.println(obj instanceof Integer);// 継承関係がないのでfalse
-
-        if (obj instanceof FooService) {
-            FooService service = (FooService) obj;//objはFooServiceであるため、キャストが可能
-            System.out.println(service.say());
-        }
+        Employee employee1 = new Employee(1, "山田太郎");
+        Employee employee2 = new Employee(1, "山田太郎");
+        Set<Employee> employees = new HashSet<>();
+        employees.add(employee1);
+        employees.add(employee2);
+        // hashCodeメソッドがオーバーライドされていないため、
+        // ObjectクラスのhashCodeメソッドが呼ばれ、
+        // employee1とemployee2はHashSetから異なるインスタンスとして扱われてしまう。（意図しない動作）
+        System.out.println(employees.size());
     }
 }
