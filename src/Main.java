@@ -1,18 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String... args) {
-        Point point1 = new Point(3, 2);
-        Point point2 = new Point(3, 2);
-
-        System.out.println(point1);
-        System.out.println(point2);
-
-        System.out.println(point1.hashCode());
-        System.out.println(point2.hashCode());
-
-        System.out.println(point1 == point2);
-        System.out.println(point1.equals(point2));
-
-        System.out.println(point1.toString());
-        System.out.println(point2.toString());
+        List list = new ArrayList();
+        list.add("Java");
+        String element = (String) list.get(0);// キャストが必要！
+        System.out.println(element);
     }
 }
