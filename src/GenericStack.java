@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringStack {
-    private List<String> taskList;
+public class GenericStack<E> {
+    private List<E> taskList;
 
-    public StringStack() {
+    public GenericStack() {
         taskList = new ArrayList<>();
     }
 
-    public boolean push(String task) {
+    public boolean push(E task) {
         return taskList.add(task);
     }
 
-    public String pop() {
+    public E pop() {
         if (taskList.isEmpty()) {
             return null;
         }
