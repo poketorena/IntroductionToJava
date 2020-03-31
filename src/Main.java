@@ -1,16 +1,15 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
     public static void main(String... args) {
-        Employee employee1 = new Employee(1, "山田太郎");
-        Employee employee2 = new Employee(1, "山田太郎");
-        Set<Employee> employees = new HashSet<>();
-        employees.add(employee1);
-        employees.add(employee2);
-        // hashCodeメソッドがオーバーライドされていないため、
-        // ObjectクラスのhashCodeメソッドが呼ばれ、
-        // employee1とemployee2はHashSetから異なるインスタンスとして扱われてしまう。（意図しない動作）
-        System.out.println(employees.size());
+        Point point1 = new Point(3, 2);
+        Point point2 = new Point(3, 2);
+
+        System.out.println(point1);
+        System.out.println(point2);
+
+        System.out.println(point1.hashCode());
+        System.out.println(point2.hashCode());
+
+        System.out.println(point1 == point2);
+        System.out.println(point1.equals(point2));
     }
 }
