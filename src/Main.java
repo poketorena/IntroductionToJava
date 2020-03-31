@@ -4,9 +4,8 @@ import java.util.Comparator;
 public class Main {
     public static void main(String... args) {
         Integer[] array = {3, 1, 13, 2, 8, 5, 1};
-        Comparator<Integer> c = (o1, o2) -> o2.compareTo(o1);
 
-        Arrays.sort(array, c);
+        Arrays.sort(array, Comparator.reverseOrder());
         System.out.println(Arrays.toString(array));
     }
 }
