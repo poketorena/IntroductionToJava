@@ -4,10 +4,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String... args) {
-        List<Integer> integerList = Arrays.asList(1, 62, 31, 1, 54, 31);
+        List<Integer> integerList = new ArrayList<>(Arrays.asList(1, 62, 31, 1, 54, 31));
 
-        // Arrays.asListで作ったリストは要素の追加・変更・削除をすることができない！
-         integerList.add(999);
+        // Arrays.asListで作ったリストの内容を変更したい場合は、Listクラスをnewするときの引数として渡す
+        integerList.add(999);
 
         for (var element : integerList) {
             System.out.println(element);
