@@ -11,5 +11,8 @@ public class Main {
 
         System.out.println(point1 == point2);
         System.out.println(point1.equals(point2));
+
+        System.out.println(point1.toString());
+        System.out.println(point2.toString());
     }
 }
