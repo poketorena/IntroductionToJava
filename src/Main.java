@@ -9,14 +9,7 @@ public class Main {
                 new Student("Takuya", 80)
         };
 
-        Comparator<Student> comparator = new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return Integer.compare(o2.getScore(), o1.getScore());
-            }
-        };
-
-        Arrays.sort(students, comparator);
+        Arrays.sort(students, (o1, o2) -> Integer.compare(o2.getScore(), o1.getScore()));
         for (Student student : students) {
             System.out.println(student.getName() + ":" + student.getScore());
         }
